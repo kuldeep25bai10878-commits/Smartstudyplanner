@@ -2,37 +2,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
-/
-
-SMART STUDY PLANNER
-* -------------------
-* Unique idea: Instead of a plain CRUD app (student/library management),
-* this tool solves a real problem using a CUSTOM WEIGHTED PRIORITY ALGORITHM.
-
-You enter your subjects with:
-*   - difficulty (1-10, how hard you find it)
-*   - daysLeft   (days until exam/deadline)
-*   - credits    (weightage/importance of subject)
-
-The program calculates a PRIORITY SCORE for each subject:
-
-urgency   = 100 / (daysLeft + 1)          -> less time left = more urgent
-*     priority  = (difficulty * 2) + urgency + (credits * 1.5)
-
-Then it distributes your total available daily study hours across
-* subjects proportionally to their priority score, so you know exactly
-* how many hours to give each subject today.
-
-This formula + hour-allocation logic is original, so the chance of
-* finding an identical project online is extremely low. Explain the
-* formula logic yourself in the viva -- it's simple enough to defend.
-/
 
 class Subject {
 String name;
-int difficulty;   // 1 - 10
-int daysLeft;     // days until exam
-int credits;      // 1 - 10 importance
+int difficulty; 
+int daysLeft;     
+int credits;     
 double priorityScore;
 double allocatedHours;
 
